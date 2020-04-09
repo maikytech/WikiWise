@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+options: "2f1bdff7b3a2167699c1b3028a430d52"
+build_time: [1586470135, 631967000]
+inputs:
+  "/Users/maiquicedeno/PosetoStudioFiles/AppleDeveloper/WikiWise/WikiWise/ViewController.swift": [1586470132, 300017155]
+  "/Users/maiquicedeno/PosetoStudioFiles/AppleDeveloper/WikiWise/WikiWise/AppDelegate.swift": [1586470132, 288361276]
+  "/Users/maiquicedeno/PosetoStudioFiles/AppleDeveloper/WikiWise/WikiWise/SceneDelegate.swift": [1586470132, 298222421]
