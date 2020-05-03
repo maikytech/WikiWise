@@ -27,15 +27,13 @@ class ViewController: UIViewController {
     @IBAction func Finder(_ sender: UIButton) {
         
         toFind = textField.text!
-        print(toFind!)
+        //print(toFind!)
         
         let url = "https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=\(toFind!)"
-        
-        print(url)
+        //print(url)
         
         let urlToFind = URL(string: url)
-        
-        print(urlToFind!)
+        //print(urlToFind!)
         
         let task = URLSession.shared.dataTask(with: urlToFind!) {(data, response, error) in
 
@@ -45,20 +43,37 @@ class ViewController: UIViewController {
             }else {
 
                 do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-
-                    print(json)
+                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
+                    
+                    let querySubJson = json["query"] as! [String:Any]
+                    //print(querySubJson)
+                    
+                    let pagesSubJson = querySubJson["pages"] as! [String: Any]
+                    //print(pagesSubJson)
+                    
+                    let pagesKeys = pagesSubJson.keys
+                    
+                    let idWordToFind = pagesKeys.first!
+                    
+                    let idSubJson = pagesSubJson[idWordToFind] as! [String: Any]
+                    //print(idSubJson)
+                    
+                    let extractStringHtml = idSubJson["extract"] as! String
+                    //print(extractStringHtml)
+                    
+                    DispatchQueue.main.sync(execute:{
+                        
+                        self.webView.loadHTMLString(extractStringHtml, baseURL: nil)
+                    })
 
                 }catch {
 
                     print("JSON error")
                 }
             }
-
         }
 
         task.resume()
-        
         
     }
     
