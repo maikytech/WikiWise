@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     
+    /* URL https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=sega */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,8 +27,39 @@ class ViewController: UIViewController {
     @IBAction func Finder(_ sender: UIButton) {
         
         toFind = textField.text!
-        
         print(toFind!)
+        
+        let url = "https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=\(toFind!)"
+        
+        print(url)
+        
+        let urlToFind = URL(string: url)
+        
+        print(urlToFind!)
+        
+        let task = URLSession.shared.dataTask(with: urlToFind!) {(data, response, error) in
+
+            if error != nil {
+
+                print(error!)
+            }else {
+
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+
+                    print(json)
+
+                }catch {
+
+                    print("JSON error")
+                }
+            }
+
+        }
+
+        task.resume()
+        
+        
     }
     
 
