@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         toFind = textField.text!
         //print(toFind!)
         
-        let url = "https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=\(toFind!)"
+        let url = "https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=\(toFind!.replacingOccurrences(of: " ", with: "%20"))"
         //print(url)
         
         let urlToFind = URL(string: url)
