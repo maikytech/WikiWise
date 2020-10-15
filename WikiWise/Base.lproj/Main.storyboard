@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,41 +12,59 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WikiWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-l0-Njr">
-                                <rect key="frame" x="0.0" y="66" width="414" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-l0-Njr">
+                                <rect key="frame" x="20" y="165" width="335" height="486"/>
+                                <color key="backgroundColor" red="0.97696385792023166" green="0.99908547335641218" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WikiWise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-U9-e3x">
-                                <rect key="frame" x="127" y="2" width="161" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WikiWise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-U9-e3x">
+                                <rect key="frame" x="110.66666666666667" y="94" width="153.66666666666663" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="uH5-oM-ZFS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="sega" borderStyle="line" placeholder="Find" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87e-2s-ItX">
-                                <rect key="frame" x="20" y="451" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdh-vD-JFG">
-                                <rect key="frame" x="149" y="518" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdh-vD-JFG">
+                                <rect key="frame" x="129.66666666666666" y="728" width="116" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="UcT-Gx-O5u"/>
+                                </constraints>
                                 <state key="normal" title="Find"/>
                                 <connections>
                                     <action selector="Finder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLM-te-bHV"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="sega" borderStyle="line" placeholder="Find" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87e-2s-ItX">
+                                <rect key="frame" x="20" y="674" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="jve-kC-9cd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N7Y-U9-e3x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8X9-oZ-8kq"/>
+                            <constraint firstItem="n6P-l0-Njr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K8q-lV-iNW"/>
+                            <constraint firstItem="n6P-l0-Njr" firstAttribute="top" secondItem="N7Y-U9-e3x" secondAttribute="bottom" constant="15" id="MdI-TJ-jDq"/>
+                            <constraint firstItem="87e-2s-ItX" firstAttribute="top" secondItem="n6P-l0-Njr" secondAttribute="bottom" constant="23" id="MoB-7u-c5y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vdh-vD-JFG" secondAttribute="bottom" constant="20" id="NbG-ly-qse"/>
+                            <constraint firstItem="N7Y-U9-e3x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Njw-wy-DYy"/>
+                            <constraint firstItem="vdh-vD-JFG" firstAttribute="top" secondItem="87e-2s-ItX" secondAttribute="bottom" constant="20" id="Ok6-WN-owd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n6P-l0-Njr" secondAttribute="trailing" constant="20" id="UaM-vo-0GX"/>
+                            <constraint firstItem="87e-2s-ItX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZLC-1D-RXQ"/>
+                            <constraint firstItem="vdh-vD-JFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNr-0t-isu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="87e-2s-ItX" secondAttribute="trailing" constant="20" id="gYq-2O-mtD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -56,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
+            <point key="canvasLocation" x="136.80000000000001" y="129.31034482758622"/>
         </scene>
     </scenes>
 </document>

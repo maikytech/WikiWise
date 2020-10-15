@@ -12,18 +12,17 @@ import WebKit
 class ViewController: UIViewController {
     
     var toFind:String?
+  
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var textField: UITextField!
-    
     
     /* URL https://es.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=sega */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-    
-    
+
     @IBAction func Finder(_ sender: UIButton) {
         
         toFind = textField.text!
